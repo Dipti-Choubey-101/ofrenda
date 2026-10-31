@@ -1,0 +1,50 @@
+/* Deep violet night, marigold candlelight, a touch of magenta. */
+:root { --bg:#110a1e; --panel:#1b1130; --line:#34214f; --text:#f3eaff; --dim:#a190c4; --gold:#ff9f1c; --pink:#ff4f9a; --ink:#1a0f00; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0 auto; max-width: 780px; padding: 0 24px 64px; background: var(--bg); color: var(--text);
+  font: 16px/1.5 "Segoe UI Variable", "Segoe UI", system-ui, sans-serif; color-scheme: dark; }
+button { font: inherit; cursor: pointer; }
+button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+header { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line); }
+h1 { font-size: 17px; font-weight: 600; margin: 0; }
+h2 { font-size: 20px; margin: 40px 0 6px; }
+.right { display: flex; align-items: center; color: var(--dim); font-size: 13px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--dim); margin-right: 6px; }
+.dot.ready { background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+.dot.bad { background: var(--pink); box-shadow: 0 0 8px var(--pink); }
+#notice { display: none; margin-top: 16px; padding: 10px 14px; border: 1px solid var(--pink); border-radius: 8px; color: #ffd0e4; font-size: 14px; }
+
+.lede { margin: 36px 0 6px; font: 34px/1.2 Georgia, "Times New Roman", serif; }
+.sub { margin: 0 0 20px; color: var(--dim); }
+section > label, #cardBox label { display: block; margin-bottom: 16px; font-size: 14px; color: var(--dim); }
+input, select, textarea { display: block; width: 100%; margin-top: 6px; padding: 10px 12px; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 10px; color: var(--text); font: inherit; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(255,159,28,.15); }
+textarea { resize: vertical; line-height: 1.55; margin-bottom: 14px; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.go { background: var(--gold); color: var(--ink); border: 0; border-radius: 10px; padding: 10px 18px; font-weight: 700; }
+.go:hover { box-shadow: 0 0 18px rgba(255,159,28,.4); }
+.go:disabled { opacity: .4; cursor: default; box-shadow: none; }
+.go.on { background: var(--pink); color: #fff; }
+.ghost { background: none; border: 1px solid var(--line); border-radius: 10px; padding: 9px 14px; color: var(--dim); }
+.ghost:hover { border-color: var(--gold); color: var(--text); }
+.filebtn { cursor: pointer; font-size: 16px !important; margin: 0 !important; }
+audio { display: block; width: 100%; margin: 0 0 14px; }
+#msg { color: var(--dim); font-size: 14px; margin: 12px 0 0; }
+
+/* A remembrance card: a candle glow along the top edge. */
+.memory { background: var(--panel); border: 1px solid var(--line); border-top: 2px solid var(--gold); border-radius: 6px 6px 12px 12px;
+  padding: 24px 26px; margin-bottom: 14px; box-shadow: 0 -14px 30px -16px rgba(255,159,28,.5); }
+.memory .who { margin: 0; color: var(--gold); font-size: 14px; }
+.memory h3, .c-title { font: 26px/1.25 Georgia, "Times New Roman", serif; margin: 4px 0 10px; }
+.memory .text, .c-text { font: 17px/1.65 Georgia, "Times New Roman", serif; margin: 0 0 14px; }
+.c-title, .c-text { background: none; border: 0; border-bottom: 1px dashed var(--line); border-radius: 0; padding: 4px 0; box-shadow: none !important; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.chip { border: 1px solid var(--gold); color: var(--gold); border-radius: 999px; padding: 2px 12px; font-size: 14px; }
+blockquote { margin: 0 0 12px; padding-left: 14px; border-left: 2px solid var(--pink); font: italic 17px/1.55 Georgia, serif; }
+blockquote:empty { display: none; }
+.memory .date { margin: 8px 0 0; color: var(--dim); font-size: 13px; }
+#shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 22px; padding-top: 14px; }
+#shelf .memory { margin: 0; }

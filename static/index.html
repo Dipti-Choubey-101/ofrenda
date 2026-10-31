@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ofrenda</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Ofrenda</h1>
+    <span class="right"><i class="dot" id="dot"></i><span id="model"></span></span>
+  </header>
+  <div id="notice"></div>
+
+  <p class="lede">Keep a story before it fades.</p>
+  <p class="sub">Record someone telling it, or add a voice memo. Everything stays on this laptop.</p>
+
+  <section>
+    <label>Who is this story about
+      <input id="who" placeholder="e.g. Nani, my grandfather, Aunt Rina">
+    </label>
+    <label>Language they speak
+      <select id="lang">
+        <option value="">Work it out automatically</option>
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="bn">Bengali</option>
+        <option value="es">Spanish</option>
+      </select>
+    </label>
+    <div class="row">
+      <button class="go" id="rec">Record a story</button>
+      <label class="ghost filebtn">Add a voice memo<input type="file" id="file" accept="audio/*" hidden></label>
+    </div>
+    <audio id="player" controls hidden></audio>
+    <button class="go" id="write" disabled>Write it down</button>
+    <p id="msg"></p>
+  </section>
+
+  <section id="transcriptBox" hidden>
+    <h2>What was said</h2>
+    <p class="sub">Check the names and places. A recording can mishear them.</p>
+    <textarea id="transcript" rows="8"></textarea>
+    <button class="go" id="make">Make the remembrance</button>
+  </section>
+
+  <section id="cardBox" hidden>
+    <article class="memory">
+      <input id="c-title" class="c-title" aria-label="Title">
+      <textarea id="c-text" class="c-text" rows="5" aria-label="Remembrance"></textarea>
+      <label>They loved <input id="c-loved" placeholder="separated by commas"></label>
+      <blockquote id="c-quote"></blockquote>
+    </article>
+    <p class="sub">Read it through and fix anything that isn't true. Then save.</p>
+    <div class="row">
+      <button class="go" id="save">Save to the ofrenda</button>
+      <button class="ghost" id="again">Start over</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>The ofrenda</h2>
+    <div id="shelf"></div>
+  </section>
+  <script src="/static/script.js"></script>
+</body>
+</html>
